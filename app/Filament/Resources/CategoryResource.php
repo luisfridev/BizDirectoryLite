@@ -27,7 +27,7 @@ class CategoryResource extends Resource
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255),
-                Forms\Components\Toggle::make('status'),
+                Forms\Components\Toggle::make('is_active'),
                 Forms\Components\TextInput::make('intro')
                     ->maxLength(160),
                 Forms\Components\Textarea::make('description')
@@ -45,7 +45,7 @@ class CategoryResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\IconColumn::make('status')
+                Tables\Columns\IconColumn::make('is_active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('intro')
                     ->searchable(),
