@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => fake()->words(rand(1, 3), true),
-            'status' => rand(0, 1),
+            'is_active' => rand(0, 1),
             'intro' =>  fake()->sentence(),
             'description' => fake()->paragraphs(2, true),
         ];
