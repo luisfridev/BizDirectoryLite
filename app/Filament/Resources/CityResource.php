@@ -6,6 +6,7 @@ use App\Filament\Resources\CityResource\Pages;
 use App\Filament\Resources\CityResource\RelationManagers;
 use App\Models\City;
 use Filament\Forms;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -36,6 +37,8 @@ class CityResource extends Resource
                     ->maxLength(255)
                     ->disabled()
                     ->readOnly(),
+                SpatieMediaLibraryFileUpload::make('city_cover')
+                    ->collection('cities-covers')
             ]);
     }
 
